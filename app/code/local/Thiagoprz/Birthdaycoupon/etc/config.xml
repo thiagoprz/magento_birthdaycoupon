@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Thiagoprz_Birthdaycoupon>
+            <version>0.0.1</version>
+        </Thiagoprz_Birthdaycoupon>
+    </modules>
+    <global>
+        <helpers>
+            <thiagoprz_birthdaycoupon>
+                <class>thiagoprz_birthdaycoupon_Helper</class>
+            </thiagoprz_birthdaycoupon>
+        </helpers>
+        <models>
+            <thiagoprz_birthdaycoupon>
+                <class>Thiagoprz_Birthdaycoupon_Model</class>
+            </thiagoprz_birthdaycoupon>
+        </models>
+    </global>
+    <adminhtml>
+        <events>
+            <salesrule_rule_condition_combine>
+                <observers>
+                    <thiagoprz_birthdaycoupon_salesrule_rule_condition_combine>
+                        <type>model</type>
+                        <class>Thiagoprz_Birthdaycoupon_Model_Observer</class>
+                        <method>addBirthdayCondition</method>
+                    </thiagoprz_birthdaycoupon_salesrule_rule_condition_combine>
+                </observers>
+            </salesrule_rule_condition_combine>
+        </events>
+    </adminhtml>
+</config>
